@@ -27,7 +27,15 @@ void nextPermutation(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 2, 3};
+    //std::vector<int> nums = {1, 2, 3};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     nextPermutation(nums);
 
     for (int num : nums) {

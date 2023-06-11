@@ -45,8 +45,17 @@ std::vector<std::vector<int>> fourSum(std::vector<int>& nums, int target) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 0, -1, 0, -2, 2};
-    int target = 0;
+    //std::vector<int> nums = {1, 0, -1, 0, -2, 2};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    int target ;
+    std::cin>>target;
     std::vector<std::vector<int>> result = fourSum(nums, target);
 
     // Print the result

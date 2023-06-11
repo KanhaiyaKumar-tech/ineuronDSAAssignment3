@@ -28,9 +28,18 @@ std::vector<std::vector<int>> findMissingRanges(std::vector<int>& nums, int lowe
 }
 
 int main() {
-    std::vector<int> nums = {0, 1, 3, 50, 75};
-    int lower = 0;
-    int upper = 99;
+    //std::vector<int> nums = {0, 1, 3, 50, 75};
+
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    int lower, upper ;
+    std::cin>>lower>>upper;
     std::vector<std::vector<int>> result = findMissingRanges(nums, lower, upper);
 
     // Print the result

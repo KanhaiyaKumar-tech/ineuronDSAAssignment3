@@ -22,8 +22,17 @@ int searchInsert(std::vector<int>& nums, int target) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 3, 5, 6};
-    int target = 5;
+    //std::vector<int> nums = {1, 3, 5, 6};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    int target ;
+    std::cin>>target;
     int index = searchInsert(nums, target);
 
     std::cout << "Target index: " << index << std::endl; // Output: 2

@@ -32,8 +32,17 @@ int threeSumClosest(std::vector<int>& nums, int target) {
 }
 
 int main() {
-    std::vector<int> nums = {-1, 2, 1, -4};
-    int target = 1;
+    //std::vector<int> nums = {-1, 2, 1, -4};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    int target ;
+    std::cin>>target;
     int result = threeSumClosest(nums, target);
     std::cout << result << std::endl;  // Output: 2
 

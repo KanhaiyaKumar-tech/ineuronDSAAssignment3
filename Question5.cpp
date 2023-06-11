@@ -24,7 +24,15 @@ std::vector<int> plusOne(std::vector<int>& digits) {
 }
 
 int main() {
-    std::vector<int> digits = {1, 2, 3};
+    //std::vector<int> digits = {1, 2, 3};
+    std::vector<int> digits;
+    int num;
+    while (std::cin >> num) {
+        digits.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     std::vector<int> result = plusOne(digits);
 
     for (int digit : result) {

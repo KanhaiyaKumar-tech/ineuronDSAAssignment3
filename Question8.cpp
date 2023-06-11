@@ -17,10 +17,18 @@ bool canAttendMeetings(std::vector<std::vector<int>>& intervals) {
 }
 
 int main() {
-    std::vector<std::vector<int>> intervals = {{0, 30}, {5, 10}, {15, 20}};
+    //std::vector<std::vector<int>> intervals = {{0, 30}, {5, 10}, {15, 20}};
+    std::vector<std::vector<int>> intervals;
+    int start,end;
+    while (std::cin >> start >> end) {
+        intervals.push_back({start,end});
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     bool canAttend = canAttendMeetings(intervals);
 
-    std::cout << "Can attend all meetings: " << std::boolalpha << canAttend << std::endl; // Output: false
+    std::cout << std::boolalpha << canAttend << std::endl; // Output: false
 
     return 0;
 }

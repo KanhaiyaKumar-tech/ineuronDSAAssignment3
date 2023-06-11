@@ -12,7 +12,15 @@ int singleNumber(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {2, 2, 1};
+    //std::vector<int> nums = {2, 2, 1};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     int single = singleNumber(nums);
 
     std::cout << "Single number: " << single << std::endl; // Output: 1
